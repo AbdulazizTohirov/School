@@ -85,6 +85,7 @@ def user_create(request):
             password = password,
             email = email
         )
+        
         user = UserSerializer(news_user)
         return Response(user.data, status=status.HTTP_201_CREATED)
     else:
